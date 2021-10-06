@@ -15,7 +15,7 @@ if(isset($_POST['submit'])){
     if(!empty($_POST['hobby'])) {
         print("<br> Your hobby:<br>");
         foreach($_POST['hobby'] as $value){
-            print( "$value <br/>");
+            print( "- $value <br/>");
         }
     }
 }
