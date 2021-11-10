@@ -4,7 +4,6 @@ class Page
     private string $page;
     private string $title;
     private int $year;
-    private string $copyright;
     private const SPECIALC = array("&", "\"", "'", "<", ">");
     private const REPLACEC = array("&amp;", "&quot;", "&#039;", "&lt;", "&gt;");
 
@@ -13,7 +12,6 @@ class Page
         $this->page = '';
         $this->title = 'Auto create';
         $this->year = date('Y');
-        $this->copyright = 'ChuDat';
     }
     private function addHeader()
     {
@@ -21,7 +19,7 @@ class Page
     }
     private function addFooter()
     {
-        $this->page =   $this->page . "<footer>Copyright: " . $this->copyright . "</footer>";
+        $this->page =   $this->page . "<footer>This is a footer</footer>";
     }
     public function addContent(string $content)
     {
